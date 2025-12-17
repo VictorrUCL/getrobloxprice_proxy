@@ -13,7 +13,7 @@ let lastFetch = 0;
 const CACHE_TIME = 1000 * 60 * 10; // 10 min
 
 app.get("/", (req, res) => {
-  res.send("Rolimons proxy running");
+  res.send("@2025 Ghost.tech");
 });
 
 app.get("/rolimons/item/:assetId", async (req, res) => {
@@ -39,10 +39,10 @@ app.get("/rolimons/item/:assetId", async (req, res) => {
       trend: item[6]
     });
   } catch (err) {
-    res.status(500).json({ error: "Rolimons fetch failed" });
+    res.status(500).json({ error: "Fetch failed" });
   }
 });
 
 app.listen(PORT, () => {
-  console.log("Server running on port", PORT);
+  console.log("Server running on port: ", PORT);
 });
